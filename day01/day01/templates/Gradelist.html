@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradelist</title>
+</head>
+<body>
+<ul>
+{% for grade in grades %}
+    <li><a href="#">{{ grade.g_name }}</a></li>
+{% endfor %}
+
+
+
+</ul>
+</body>
+</html>

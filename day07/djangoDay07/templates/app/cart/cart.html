@@ -1,0 +1,54 @@
+{% extends 'app/base/base_main.html' %}
+{% load static %}
+{% block extraCSS %}
+
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'app/cart/css/cart.css' %}">
+
+{% endblock %}
+{% block content %}
+    <div id="cart">
+        <h3>购物车</h3>
+
+        <div class="full">
+            <section>
+
+                <ul>
+                    <li class="clear">
+                        <div>
+                            <p>收货人：<span>Rock</span></p>
+
+                            <p>收货地址：<span>宝盛里</span></p>
+                        </div>
+
+                        <p>收货电话：<span>1109 </span><b class="change">修改></b></p>
+                    </li>
+                </ul>
+
+
+                <div class="bill">
+                    <p>闪送超市</p>
+                    <p>0元抢购</p>
+                    <a href="#">凑单专区</a>
+                </div>
+
+
+                <div class="delivery">
+                    <span>收货时间:</span>
+                    <span>一般一小时</span>
+                    <a href="#">可预订></a>
+
+                    <p><span>收货备注:</span><input type="text"></p>
+
+                </div>
+                <div class="payTheBill">
+                    <div class="confirm"><span></span></div>
+                    <p><span>全选</span><span>共计：</span> <span>总价</span> </p>
+                    <a href="#">选好了</a>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+{% endblock %}

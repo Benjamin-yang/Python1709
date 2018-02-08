@@ -1,0 +1,37 @@
+{% extends 'app/base/base_main.html' %}
+{% load static %}
+
+{% block extraCSS %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static "app/home/css/home.css" %}">
+
+{% endblock %}
+
+
+{% block extraJS%}
+    <script type="text/javascript" src="{% static 'app/home/js/home.js' %}"></script>
+{% endblock%}
+
+
+
+{% block content %}
+
+    <div id="home">
+
+        <!--轮播-->
+        <div class="swiper-container" id="topSwiper">
+            <div class="swiper-wrapper">
+                {% for wheel  in wheels %}
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="{{ wheel.img }}" alt="{{ wheel.name }}"/>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination "></div>
+{#swiper-pagination-clickable swiper-pagination-bullets#}
+        </div>
+    </div>
+
+{% endblock %}
